@@ -9,24 +9,29 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BannerComponent } from './shared/banner/banner.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
+const ANGULAR_MATERIAL = [
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  BrowserAnimationsModule,
+];
+
+const SHARED_COMPONENTS = [
+  HeaderComponent,
+  CardComponent,
+  FooterComponent,
+  BannerComponent,
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    CardComponent,
-    FooterComponent,
-    BannerComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatToolbarModule
-  ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, ...SHARED_COMPONENTS],
+  imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL],
+  providers: [provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
