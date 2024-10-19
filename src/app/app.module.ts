@@ -29,6 +29,7 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { provideHttpClient } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
@@ -61,7 +62,7 @@ const SHARED_COMPONENTS = [
 const PAGES = [HomeComponent];
 @NgModule({
   declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES],
-  imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL],
+  imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL, ReactiveFormsModule],
   providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
 })
