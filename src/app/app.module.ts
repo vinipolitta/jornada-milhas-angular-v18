@@ -13,12 +13,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { HomeComponent } from './pages/home/home.component';
+import { ContainerComponent } from './shared/container/container.component';
+import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
+import { MatCardModule } from '@angular/material/card';
+import { CardDepoimentoComponent } from './shared/card-depoimento/card-depoimento.component';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
   MatIconModule,
   MatButtonModule,
   BrowserAnimationsModule,
+  MatCardModule
 ];
 
 const SHARED_COMPONENTS = [
@@ -26,10 +32,15 @@ const SHARED_COMPONENTS = [
   CardComponent,
   FooterComponent,
   BannerComponent,
+  ContainerComponent,
+  CardBuscaComponent
 ];
 
+const PAGES = [
+  HomeComponent
+]
 @NgModule({
-  declarations: [AppComponent, ...SHARED_COMPONENTS],
+  declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES, CardDepoimentoComponent,],
   imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
