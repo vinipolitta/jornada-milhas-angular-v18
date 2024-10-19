@@ -28,6 +28,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
+import { provideHttpClient } from '@angular/common/http';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
@@ -61,7 +62,7 @@ const PAGES = [HomeComponent];
 @NgModule({
   declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES],
   imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
