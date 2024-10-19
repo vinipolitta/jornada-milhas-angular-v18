@@ -25,6 +25,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ModalComponent } from './shared/modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
@@ -37,7 +40,8 @@ const ANGULAR_MATERIAL = [
   MatFormFieldModule,
   MatInputModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatDialogModule,
 ];
 
 const SHARED_COMPONENTS = [
@@ -49,6 +53,8 @@ const SHARED_COMPONENTS = [
   CardBuscaComponent,
   CardDepoimentoComponent,
   FormBuscaComponent,
+  ModalComponent,
+  BotaoControleComponent,
 ];
 
 const PAGES = [HomeComponent];
