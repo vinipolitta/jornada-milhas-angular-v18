@@ -30,6 +30,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { DepoimentosComponent } from './shared/depoimentos/depoimentos.component';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
@@ -44,6 +47,7 @@ const ANGULAR_MATERIAL = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatDialogModule,
+  MatAutocompleteModule
 ];
 
 const SHARED_COMPONENTS = [
@@ -61,7 +65,7 @@ const SHARED_COMPONENTS = [
 
 const PAGES = [HomeComponent];
 @NgModule({
-  declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES],
+  declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES, DropdownUfComponent, DepoimentosComponent],
   imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL, ReactiveFormsModule],
   providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
