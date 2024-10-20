@@ -33,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { DepoimentosComponent } from './shared/depoimentos/depoimentos.component';
+import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
@@ -65,7 +66,7 @@ const SHARED_COMPONENTS = [
 
 const PAGES = [HomeComponent];
 @NgModule({
-  declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES, DropdownUfComponent, DepoimentosComponent],
+  declarations: [AppComponent, ...SHARED_COMPONENTS, ...PAGES, DropdownUfComponent, DepoimentosComponent, SeletorPassageiroComponent],
   imports: [BrowserModule, AppRoutingModule, ...ANGULAR_MATERIAL, ReactiveFormsModule],
   providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
